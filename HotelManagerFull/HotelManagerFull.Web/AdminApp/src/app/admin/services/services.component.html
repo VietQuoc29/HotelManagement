@@ -1,0 +1,353 @@
+<div class="page-wrapper">
+  <!-- Page body start -->
+  <div class="page-body">
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- Basic Form Inputs card start -->
+        <div class="card">
+          <div class="card-header">
+            <h5>Danh sách dịch vụ</h5>
+            <span>
+              <ul class="breadcrumb-title b-t-default p-t-10">
+                <li class="breadcrumb-item">
+                  <a (click)="goToDashborad()"> <i class="fa fa-home"></i> </a>
+                </li>
+                <li class="breadcrumb-item">Dịch vụ</li>
+              </ul></span
+            >
+          </div>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-lg-12 col-xl-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs md-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      data-toggle="tab"
+                      href="#services"
+                      role="tab"
+                      aria-expanded="false"
+                      >Dịch vụ</a
+                    >
+                    <div class="slide"></div>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      data-toggle="tab"
+                      href="#services_categories"
+                      role="tab"
+                      aria-expanded="true"
+                      >Loại dịch vụ</a
+                    >
+                    <div class="slide"></div>
+                  </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content card-block">
+                  <div
+                    class="tab-pane active"
+                    id="services"
+                    role="tabpanel"
+                    aria-expanded="false"
+                  >
+                    <form
+                      nz-form
+                      [formGroup]="searchFormService"
+                      (ngSubmit)="searchService(searchFormService.value)"
+                    >
+                      <div class="form-group row">
+                        <div class="col-sm-4 p-l-0 p-r-0">
+                          <label class="col-sm-12 col-form-label"
+                            >Tên dịch vụ</label
+                          >
+                          <div class="col-sm-12">
+                            <input
+                              type="text"
+                              class="form-control form-control-round"
+                              placeholder="Nhập tên dịch vụ"
+                              formControlName="textSearchService"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-sm-8 p-l-0 p-r-0">
+                          <label class="col-sm-12 col-form-label">&nbsp;</label>
+                          <div class="col-sm-12 t-a-r">
+                            <button
+                              type="submit"
+                              class="btn btn-primary btn-round m-r-5"
+                            >
+                              <i class="ti-search"></i>Tìm kiếm
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-round m-r-5"
+                              (click)="openModalService()"
+                            >
+                              <i class="ti-plus"></i>Thêm mới
+                            </button>
+                            <button
+                              class="btn btn-info btn-round"
+                              (click)="resetFormService()"
+                            >
+                              <i class="ti-reload"></i>Làm mới
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="table-responsive">
+                      <nz-table
+                        class="table"
+                        nzTableLayout="fixed"
+                        nzSize="small"
+                        [nzScroll]="{ x: 'scroll' }"
+                        nzShowSizeChanger
+                        [nzFrontPagination]="false"
+                        [nzData]="listDataService"
+                        [nzTotal]="totalService"
+                        [nzPageSize]="pageSizeService"
+                        [nzPageIndex]="pageIndexService"
+                        [nzLoading]="isLoadingService"
+                        [nzShowTotal]="totalTemplateService"
+                        (nzQueryParams)="onQueryParamsChangeService($event)"
+                      >
+                        <thead>
+                          <tr>
+                            <th nzWidth="80px">STT</th>
+                            <th nzWidth="150px">Tên dịch vụ</th>
+                            <th nzWidth="150px">Hình ảnh</th>
+                            <th nzWidth="200px">Giá tiền / Đơn vị tính</th>
+                            <th nzWidth="150px">Loại dịch vụ</th>
+                            <th nzWidth="150px">Trạng thái</th>
+                            <th nzWidth="150px">Ghi chú</th>
+                            <th nzWidth="120px">Người tạo</th>
+                            <th nzWidth="200px">Ngày tạo</th>
+                            <th nzWidth="120px">Người cập nhật</th>
+                            <th nzWidth="200px">Ngày cập nhật</th>
+                            <th class="frozen-right" nzWidth="150px">
+                              Hành động
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of listDataService">
+                            <td>
+                              {{ item.stt }}
+                            </td>
+                            <td>{{ item.name }}</td>
+                            <td>
+                              <img
+                                [src]="item.image"
+                                style="width: 100px; height: 100px"
+                              />
+                            </td>
+                            <td>
+                              {{ item.price | currency: "VND":"" }} vnđ /
+                              {{ item.unit }}
+                            </td>
+                            <td>{{ item.serviceCategoriesName }}</td>
+                            <td>
+                              <span *ngIf="!item.status">Tạm dừng</span>
+                              <span *ngIf="item.status">Sử dụng</span>
+                            </td>
+                            <td>{{ item.note }}</td>
+                            <td>{{ item.createdBy }}</td>
+                            <td>
+                              {{
+                                item.createdDate | date: "dd/MM/yyyy HH:mm:ss"
+                              }}
+                            </td>
+                            <td>{{ item.modifiedBy }}</td>
+                            <td>
+                              {{
+                                item.modifiedDate | date: "dd/MM/yyyy HH:mm:ss"
+                              }}
+                            </td>
+                            <td class="frozen-right">
+                              <button
+                                class="btn btn-primary btn-outline-primary btn-icon m-r-5"
+                                (click)="openModalService(item)"
+                                title="Sửa dữ liệu"
+                              >
+                                <i class="ti-pencil-alt m-r-0"></i>
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-danger btn-outline-danger btn-icon"
+                                title="Xóa dữ liệu"
+                                nz-popconfirm
+                                nzPopconfirmTitle="Bạn có chắc chắn muốn xóa?"
+                                nzOkText="Ok"
+                                nzCancelText="Hủy"
+                                (nzOnConfirm)="confirmService(item.id)"
+                                (nzOnCancel)="cancelService()"
+                              >
+                                <i class="ti-trash m-r-0"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </nz-table>
+                      <ng-template
+                        #totalTemplateService
+                        let-range="range"
+                        let-total
+                      >
+                        Hiển thị {{ range[0] }}-{{ range[1] }} của
+                        {{ total }} bản ghi
+                      </ng-template>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane"
+                    id="services_categories"
+                    role="tabpanel"
+                    aria-expanded="true"
+                  >
+                    <form
+                      nz-form
+                      [formGroup]="searchFormServiceCategories"
+                      (ngSubmit)="
+                        searchServiceCategories(
+                          searchFormServiceCategories.value
+                        )
+                      "
+                    >
+                      <div class="form-group row">
+                        <div class="col-sm-4 p-l-0 p-r-0">
+                          <label class="col-sm-12 col-form-label"
+                            >Tên loại dịch vụ</label
+                          >
+                          <div class="col-sm-12">
+                            <input
+                              type="text"
+                              class="form-control form-control-round"
+                              placeholder="Nhập tên loại dịch vụ"
+                              formControlName="textSearchServiceCategories"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-sm-8 p-l-0 p-r-0">
+                          <label class="col-sm-12 col-form-label">&nbsp;</label>
+                          <div class="col-sm-12 t-a-r">
+                            <button
+                              type="submit"
+                              class="btn btn-primary btn-round m-r-5"
+                            >
+                              <i class="ti-search"></i>Tìm kiếm
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-round m-r-5"
+                              (click)="openModalServiceCategories()"
+                            >
+                              <i class="ti-plus"></i>Thêm mới
+                            </button>
+                            <button
+                              class="btn btn-info btn-round"
+                              (click)="resetFormServiceCategories()"
+                            >
+                              <i class="ti-reload"></i>Làm mới
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="table-responsive">
+                      <nz-table
+                        class="table"
+                        nzTableLayout="fixed"
+                        nzSize="small"
+                        [nzScroll]="{ x: 'scroll' }"
+                        nzShowSizeChanger
+                        [nzFrontPagination]="false"
+                        [nzData]="listDataServiceCategories"
+                        [nzTotal]="totalServiceCategories"
+                        [nzPageSize]="pageSizeServiceCategories"
+                        [nzPageIndex]="pageIndexServiceCategories"
+                        [nzLoading]="isLoadingServiceCategories"
+                        [nzShowTotal]="totalTemplateServiceCategories"
+                        (nzQueryParams)="
+                          onQueryParamsChangeServiceCategories($event)
+                        "
+                      >
+                        <thead>
+                          <tr>
+                            <th nzWidth="80px">STT</th>
+                            <th nzWidth="150px">Tên loại dịch vụ</th>
+                            <th nzWidth="120px">Người tạo</th>
+                            <th nzWidth="200px">Ngày tạo</th>
+                            <th nzWidth="120px">Người cập nhật</th>
+                            <th nzWidth="200px">Ngày cập nhật</th>
+                            <th class="frozen-right" nzWidth="150px">
+                              Hành động
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of listDataServiceCategories">
+                            <td>
+                              {{ item.stt }}
+                            </td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.createdBy }}</td>
+                            <td>
+                              {{
+                                item.createdDate | date: "dd/MM/yyyy HH:mm:ss"
+                              }}
+                            </td>
+                            <td>{{ item.modifiedBy }}</td>
+                            <td>
+                              {{
+                                item.modifiedDate | date: "dd/MM/yyyy HH:mm:ss"
+                              }}
+                            </td>
+                            <td class="frozen-right">
+                              <button
+                                class="btn btn-primary btn-outline-primary btn-icon m-r-5"
+                                (click)="openModalServiceCategories(item)"
+                                title="Sửa dữ liệu"
+                              >
+                                <i class="ti-pencil-alt m-r-0"></i>
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-danger btn-outline-danger btn-icon"
+                                title="Xóa dữ liệu"
+                                nz-popconfirm
+                                nzPopconfirmTitle="Bạn có chắc chắn muốn xóa?"
+                                nzOkText="Ok"
+                                nzCancelText="Hủy"
+                                (nzOnConfirm)="
+                                  confirmServiceCategories(item.id)
+                                "
+                                (nzOnCancel)="cancelServiceCategories()"
+                              >
+                                <i class="ti-trash m-r-0"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </nz-table>
+                      <ng-template
+                        #totalTemplateServiceCategories
+                        let-range="range"
+                        let-total
+                      >
+                        Hiển thị {{ range[0] }}-{{ range[1] }} của
+                        {{ total }} bản ghi
+                      </ng-template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page body end -->
+</div>

@@ -1,0 +1,95 @@
+<form nz-form [formGroup]="modalForm" (ngSubmit)="submitForm()">
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label"
+      >Tên tỉnh thành<span class="required-custom">(*)</span></label
+    >
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Tên tỉnh thành"
+        formControlName="name"
+        maxlength="50"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Hình ảnh</label>
+    <div class="col-sm-9">
+      <img [src]="imageSrc" class="img-custom" />
+      <input
+        id="file"
+        type="file"
+        class="form-control form-control-round"
+        (change)="onFileChange($event)"
+        #myFile
+        accept=".png, .jpg, .jpeg"
+      />
+    </div>
+  </div>
+  <div *ngIf="isShowInfo">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Người tạo</label>
+      <div class="col-sm-9">
+        <input
+          type="text"
+          class="form-control form-control-round"
+          formControlName="createdBy"
+          maxlength="50"
+          readonly
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Ngày tạo</label>
+      <div class="col-sm-9">
+        <nz-date-picker
+          [nzFormat]="dateFormat"
+          formControlName="createdDate"
+          class="form-control form-control-round"
+          nzPlaceHolder=" "
+          nzDisabled
+        ></nz-date-picker>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Người cập nhật</label>
+      <div class="col-sm-9">
+        <input
+          type="text"
+          class="form-control form-control-round"
+          formControlName="modifiedBy"
+          maxlength="50"
+          readonly
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Ngày cập nhật</label>
+      <div class="col-sm-9">
+        <nz-date-picker
+          [nzFormat]="dateFormat"
+          formControlName="modifiedDate"
+          class="form-control form-control-round"
+          nzPlaceHolder=" "
+          nzDisabled
+        ></nz-date-picker>
+      </div>
+    </div>
+  </div>
+  <div class="t-a-r">
+    <button
+      type="button"
+      class="btn btn-danger btn-round m-r-5"
+      (click)="cancelModal(false)"
+    >
+      <i class="ti-na"></i>Thoát
+    </button>
+    <button class="btn btn-primary btn-round">
+      <i class="ti-save"></i>Lưu
+    </button>
+  </div>
+</form>
+<div class="custom-snip" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

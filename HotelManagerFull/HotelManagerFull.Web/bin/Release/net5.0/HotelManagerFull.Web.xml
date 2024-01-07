@@ -1,0 +1,724 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HotelManagerFull.Web</name>
+    </assembly>
+    <members>
+        <member name="T:HotelManagerFull.Web.Controllers.AuthenticationController">
+            <summary>
+            AuthenticationController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.AuthenticationController.#ctor(HotelManagerFull.Business.ILoginBusiness)">
+            <summary>
+            AuthenticationController
+            </summary>
+            <param name="loginBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.AuthenticationController.LoginAsync(HotelManagerFull.Share.Request.LoginRequest)">
+            <summary>
+            LoginAsync
+            </summary>
+            /// <remarks>
+            {
+             "userName": "admin",
+             "password": "admin"
+            }
+            </remarks>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.AuthenticationController.GenerateDataAsync">
+            <summary>
+            GenerateDataAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.ClientController">
+            <summary>
+            ClientController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ClientController.#ctor(HotelManagerFull.Business.IHotelImagesBusiness,HotelManagerFull.Business.IProvincesBusiness,HotelManagerFull.Business.IHotelsBusiness,HotelManagerFull.Business.IRoomsBusiness,HotelManagerFull.Business.IRegisterRoomsBusiness)">
+            <summary>
+            ClientController
+            </summary>
+            <param name="hotelImagesBusiness"></param>
+            <param name="provincesBusiness"></param>
+            <param name="hotelsBusiness"></param>
+            <param name="roomsBusiness"></param>
+            <param name="registerRoomsBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ClientController.GetAllProvinces">
+            <summary>
+            GetAllProvinces
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ClientController.GetAllGallery">
+            <summary>
+            GetAllGallery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ClientController.GetAllHotelByProvinces(System.Int64)">
+            <summary>
+            GetAllHotelByProvinces
+            </summary>
+            <param name="provinceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ClientController.GetAllRoomByHotel(HotelManagerFull.Share.Request.RoomByHotelRequest)">
+            <summary>
+            GetAllRoomByHotel
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ClientController.GetAllRoomDetail(System.Int64)">
+            <summary>
+            GetAllRoomDetail
+            </summary>
+            <param name="roomId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ClientController.OrderRoomAsync(HotelManagerFull.Share.Request.RegisterRoomsRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.CustomersController">
+            <summary>
+            CustomersController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.CustomersController.#ctor(HotelManagerFull.Business.ICustomersBusiness)">
+            <summary>
+            CustomersController
+            </summary>
+            <param name="customersBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.CustomersController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.CustomersController.SaveAsync(HotelManagerFull.Share.Request.CustomersRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.CustomersController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.CustomersController.Suggestion(System.String)">
+            <summary>
+            Suggestion
+            </summary>
+            <param name="textSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.CustomersController.GetCustomerInfo(System.Int64)">
+            <summary>
+            GetCustomerInfo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.FloorsController">
+            <summary>
+            FloorsController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.FloorsController.#ctor(HotelManagerFull.Business.IFloorsBusiness)">
+            <summary>
+            FloorsController
+            </summary>
+            <param name="floorsBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.FloorsController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.FloorsController.SaveAsync(HotelManagerFull.Share.Request.FloorsRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.FloorsController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.FloorsController.Suggestion">
+            <summary>
+            Suggestion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.HotelImagesController">
+            <summary>
+            HotelImagesController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelImagesController.#ctor(HotelManagerFull.Business.IHotelImagesBusiness)">
+            <summary>
+            HotelImagesController
+            </summary>
+            <param name="hotelImagesBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelImagesController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelImagesController.GetAllHotelImage(System.Nullable{System.Int64})">
+            <summary>
+            GetAllHotelImage
+            </summary>
+            <param name="roomId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelImagesController.UploadImageAsync(HotelManagerFull.Share.Request.HotelImageRequest)">
+            <summary>
+            UploadImageAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.HotelsController">
+            <summary>
+            HotelsController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelsController.#ctor(HotelManagerFull.Business.IHotelsBusiness)">
+            <summary>
+            HotelsController
+            </summary>
+            <param name="hotelsBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelsController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelsController.SaveAsync(HotelManagerFull.Share.Request.HotelsRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.HotelsController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.OrderRoomController">
+            <summary>
+            OrderRoomController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.OrderRoomController.#ctor(HotelManagerFull.Business.IOrderRoomBusiness)">
+            <summary>
+            FloorsController
+            </summary>
+            <param name="orderRoomBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.OrderRoomController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.OrderRoomController.SaveAsync(HotelManagerFull.Share.Entities.OrderRoom)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.ProvincesController">
+            <summary>
+            ProvincesController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ProvincesController.#ctor(HotelManagerFull.Business.IProvincesBusiness)">
+            <summary>
+            ProvincesController
+            </summary>
+            <param name="provincesBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ProvincesController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ProvincesController.SaveAsync(HotelManagerFull.Share.Request.ProvincesRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ProvincesController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ProvincesController.Suggestion">
+            <summary>
+            Suggestion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.RegisterRoomsController">
+            <summary>
+            RegisterRoomsController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RegisterRoomsController.#ctor(HotelManagerFull.Business.IRegisterRoomsBusiness)">
+            <summary>
+            RegisterRoomsController
+            </summary>
+            <param name="registerRoomsBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RegisterRoomsController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RegisterRoomsController.SaveAsync(HotelManagerFull.Share.Request.RegisterRoomsRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.RolesController">
+            <summary>
+            RolesController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RolesController.#ctor(HotelManagerFull.Business.IRolesBusiness)">
+            <summary>
+            RolesController
+            </summary>
+            <param name="rolesBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RolesController.Suggestion">
+            <summary>
+            Suggestion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.RoomCategoriesController">
+            <summary>
+            RoomCategoriesController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomCategoriesController.#ctor(HotelManagerFull.Business.IRoomCategoriesBusiness)">
+            <summary>
+            RoomCategoriesController
+            </summary>
+            <param name="roomCategoriesBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomCategoriesController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomCategoriesController.SaveAsync(HotelManagerFull.Share.Request.RoomCategoriesRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomCategoriesController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomCategoriesController.Suggestion">
+            <summary>
+            Suggestion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.RoomsController">
+            <summary>
+            RoomsController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.#ctor(HotelManagerFull.Business.IRoomsBusiness)">
+            <summary>
+            RoomsController
+            </summary>
+            <param name="roomsBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.GetAllAsync(HotelManagerFull.Share.Request.RoomSearchRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.SaveAsync(HotelManagerFull.Share.Request.RoomsRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.GetInfoRoomAsync(HotelManagerFull.Share.Request.RoomInfoRequest)">
+            <summary>
+            GetInfoRoomAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.UpdateRoomStatusAsync(HotelManagerFull.Share.Request.RoomsRequest)">
+            <summary>
+            UpdateRoomStatusAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.GetInfoReturnRoomAsync(System.Int64,System.Boolean,System.Int64)">
+            <summary>
+            GetInfoReturnRoomAsync
+            </summary>
+            <param name="id"></param>
+            <param name="isPayment"></param>
+            <param name="orderRoomId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomsController.PaymentRoomAsync(HotelManagerFull.Share.Request.PaymentRoomRequest)">
+            <summary>
+            PaymentRoomAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.RoomStatusController">
+            <summary>
+            RoomStatusController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomStatusController.#ctor(HotelManagerFull.Business.IRoomStatusBusiness)">
+            <summary>
+            RoomStatusController
+            </summary>
+            <param name="roomStatusBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.RoomStatusController.Suggestion">
+            <summary>
+            Suggestion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.ServiceCategoriesController">
+            <summary>
+            ServiceCategoriesController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServiceCategoriesController.#ctor(HotelManagerFull.Business.IServiceCategoriesBusiness)">
+            <summary>
+            ServiceCategoriesController
+            </summary>
+            <param name="serviceCategoriesBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServiceCategoriesController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServiceCategoriesController.SaveAsync(HotelManagerFull.Share.Request.ServiceCategoriesRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServiceCategoriesController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServiceCategoriesController.Suggestion">
+            <summary>
+            Suggestion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServiceCategoriesController.GetAllSerrviceByServiceCategoriesAsync">
+            <summary>
+            GetAllSerrviceByServiceCategoriesAsync
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.ServicesController">
+            <summary>
+            ServicesController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServicesController.#ctor(HotelManagerFull.Business.IServicesBusiness)">
+            <summary>
+            ServicesController
+            </summary>
+            <param name="servicesBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServicesController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServicesController.SaveAsync(HotelManagerFull.Share.Request.ServicesRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.ServicesController.DeleteAsync(System.Int64)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.SexController">
+            <summary>
+            SexController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.SexController.#ctor(HotelManagerFull.Business.ISexBusiness)">
+            <summary>
+            SexController
+            </summary>
+            <param name="sexBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.SexController.Suggestion">
+            <summary>
+            Suggestion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.TransactionsController">
+            <summary>
+            TransactionsController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.TransactionsController.#ctor(HotelManagerFull.Business.ITransactionsBusiness)">
+            <summary>
+            CustomersController
+            </summary>
+            <param name="transactionsBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.TransactionsController.SaveAsync(HotelManagerFull.Share.Request.TransactionsRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Controllers.UserProfilesController">
+            <summary>
+            UserProfilesController
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.UserProfilesController.#ctor(HotelManagerFull.Business.IUserProfilesBusiness)">
+            <summary>
+            UserProfilesController
+            </summary>
+            <param name="userProfilesBusiness"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.UserProfilesController.GetAllAsync(HotelManagerFull.Share.Request.PagingRequest)">
+            <summary>
+            GetAllAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.UserProfilesController.SaveAsync(HotelManagerFull.Share.Request.UserProfilesRequest)">
+            <summary>
+            SaveAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Controllers.UserProfilesController.ActiveUserAsync(HotelManagerFull.Share.Request.ActiveUserRequest)">
+            <summary>
+            ActiveUserAsync
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Infrastructure.ConfigureService">
+            <summary>
+            ConfigureService
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Infrastructure.ConfigureService.InitAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            InitAuthentication
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:HotelManagerFull.Web.Infrastructure.DatabaseConnection">
+            <summary>
+            DatabaseConnection
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Infrastructure.DatabaseConnection.InitConnection(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            InitConnection
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:HotelManagerFull.Web.Infrastructure.ServiceLocator">
+            <summary>
+            ServiceLocator
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Infrastructure.ServiceLocator.#ctor(Microsoft.Extensions.DependencyInjection.ServiceProvider)">
+            <summary>
+            ServiceLocator
+            </summary>
+            <param name="currentServiceProvider"></param>
+        </member>
+        <member name="P:HotelManagerFull.Web.Infrastructure.ServiceLocator.Current">
+            <summary>
+            ServiceLocator
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Infrastructure.ServiceLocator.SetLocatorProvider(Microsoft.Extensions.DependencyInjection.ServiceProvider)">
+            <summary>
+            SetLocatorProvider
+            </summary>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Infrastructure.ServiceLocator.GetInstance(System.Type)">
+            <summary>
+            GetInstance
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManagerFull.Web.Infrastructure.ServiceLocator.GetInstance``1">
+            <summary>
+            GetInstance
+            </summary>
+            <typeparam name="TService"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Ioc.ComponentRegistrar">
+            <summary>
+            ComponentRegistrar
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Ioc.ComponentRegistrar.Load(Autofac.ContainerBuilder)">
+            <summary>
+            Load
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:HotelManagerFull.Web.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            IHostBuilder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManagerFull.Web.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:HotelManagerFull.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Startup
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            ConfigureServices
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            ConfigureContainer
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:HotelManagerFull.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configure
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

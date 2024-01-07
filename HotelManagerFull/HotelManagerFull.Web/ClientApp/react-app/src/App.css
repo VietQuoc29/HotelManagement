@@ -1,0 +1,274 @@
+.logo-custom {
+  width: 130px;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+.input-price,
+.select-provinces,
+.select-star {
+  background: transparent;
+  border-radius: 0px;
+  border: 1px solid #2b3146;
+  font-size: 13px;
+  line-height: 40px;
+  height: 40px;
+  color: #fff;
+  width: 100%;
+  padding-left: 15px;
+}
+
+.input-price:focus-visible,
+.select-provinces:focus-visible,
+.select-star:focus-visible {
+  outline: none;
+}
+
+.select-provinces option,
+.select-star option {
+  color: #777;
+}
+
+.select-star {
+  font-family: fontAwesome;
+}
+
+.book_tabel_item .input-group {
+  margin-bottom: 0;
+}
+
+.book_now_btn {
+  cursor: pointer;
+  color: #fff;
+}
+
+.item-name {
+  width: 100%;
+  bottom: 0 !important;
+  margin: 0;
+  text-align: center;
+  max-width: 100% !important;
+}
+
+.css-df17o1 {
+  position: fixed !important;
+}
+
+.no-bullet {
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+
+.uitk-image-media {
+  height: 100%;
+  width: 298px;
+  float: left;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+.info-room {
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+}
+
+.room-row {
+  margin-bottom: 15px;
+  height: 168px;
+}
+
+.uitk-heading-5 {
+  color: #1a1c1b;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.uitk-heading-5:hover {
+  color: #0081b0;
+}
+
+.uitk-text-default-theme {
+  color: #333333;
+}
+
+.pwa-theme--success {
+  color: #0f7800;
+  text-align: left;
+  width: 65%;
+}
+
+.uitk-price-origin {
+  color: #333333;
+  text-decoration-line: line-through;
+  text-align: right;
+  width: 35%;
+  padding-right: 10px;
+}
+
+.uitk-price-discount {
+  color: #1a1c1b;
+  font-weight: 700;
+  text-align: right;
+  width: 35%;
+  line-height: calc(28 / 24);
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.table-room {
+  width: 64%;
+}
+
+.result-li {
+  background-color: #f6f4f3;
+  border-radius: 10px;
+}
+
+.pwa-theme--status {
+  background-color: #dff0d8;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  color: #3c763d;
+}
+
+.pagination-footer {
+  margin: auto;
+}
+
+.carousel-slider {
+  height: 350px;
+}
+
+.single-post-area .blog_details {
+  padding-top: 0;
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 1px solid #333 !important;
+}
+
+.author_img {
+  width: 120px;
+  height: auto;
+}
+
+span.d-flex.justify-content-between:hover {
+  color: #52c5fd;
+}
+
+.blog_right_sidebar .post_category_widget .cat-list li {
+  padding-bottom: 0;
+}
+
+.excert {
+  padding-top: 15px;
+}
+
+.filter_by {
+  font-size: 18px;
+  line-height: 25px;
+  background: #f3c300;
+  text-align: center;
+  color: #fff;
+  padding: 8px 0px;
+  margin-bottom: 15px;
+}
+
+.single-recent-blog-post .details {
+  padding-top: 0;
+}
+
+.uitk-heading-7 {
+  font-size: 14px;
+}
+
+.hotel-text,
+.hotel-text h2 {
+  color: #fff;
+}
+
+/* ///////////////////////////////////////////// */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.modal {
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 1.75rem auto;
+  border-radius: 3px;
+  max-width: 800px;
+  display: inherit;
+}
+
+.modal-header {
+  display: flex;
+  height: 40px;
+}
+
+.modal-close-button {
+  font-size: 1.4rem;
+  margin-top: -8px;
+  color: #000;
+  opacity: 0.3;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal-body {
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.5715;
+  word-wrap: break-word;
+}
+
+.date-picker,
+.input-number {
+  width: 100% !important;
+}
+
+.lable-modal {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ant-modal {
+  top: 40px !important;
+}
+
+.banner_content h6,
+.banner_content h2,
+.single-footer-widget p,
+.single-footer-widget ul li a,
+.footer-bottom {
+  color: #fff;
+}

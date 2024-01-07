@@ -1,0 +1,198 @@
+<div class="page-wrapper">
+  <!-- Page body start -->
+  <div class="page-body">
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- Basic Form Inputs card start -->
+        <div class="card">
+          <div class="card-header">
+            <h5>Danh sách khách sạn</h5>
+            <span>
+              <ul class="breadcrumb-title b-t-default p-t-10">
+                <li class="breadcrumb-item">
+                  <a (click)="goToDashborad()"> <i class="fa fa-home"></i> </a>
+                </li>
+                <li class="breadcrumb-item">Khách sạn</li>
+              </ul></span
+            >
+          </div>
+          <div class="card-block">
+            <form
+              nz-form
+              [formGroup]="searchForm"
+              (ngSubmit)="search(searchForm.value)"
+            >
+              <div class="form-group row">
+                <div class="col-sm-4 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label">Tên khách sạn</label>
+                  <div class="col-sm-12">
+                    <input
+                      type="text"
+                      class="form-control form-control-round"
+                      placeholder="Nhập tên khách sạn"
+                      formControlName="textSearch"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-8 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label">&nbsp;</label>
+                  <div class="col-sm-12 t-a-r">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-round m-r-5"
+                    >
+                      <i class="ti-search"></i>Tìm kiếm
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success btn-round m-r-5"
+                      (click)="openModal()"
+                    >
+                      <i class="ti-plus"></i>Thêm mới
+                    </button>
+                    <button
+                      class="btn btn-info btn-round"
+                      (click)="resetForm()"
+                    >
+                      <i class="ti-reload"></i>Làm mới
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="table-responsive">
+              <nz-table
+                class="table"
+                nzTableLayout="fixed"
+                nzSize="small"
+                [nzScroll]="{ x: 'scroll' }"
+                nzShowSizeChanger
+                [nzFrontPagination]="false"
+                [nzData]="listData"
+                [nzTotal]="total"
+                [nzPageSize]="pageSize"
+                [nzPageIndex]="pageIndex"
+                [nzLoading]="isLoading"
+                [nzShowTotal]="totalTemplate"
+                (nzQueryParams)="onQueryParamsChange($event)"
+              >
+                <thead>
+                  <tr>
+                    <th nzWidth="80px">STT</th>
+                    <th nzWidth="150px">Tên khách sạn</th>
+                    <th nzWidth="150px">Ảnh đại diện</th>
+                    <th nzWidth="150px">Tỉnh thành</th>
+                    <th nzWidth="150px">Địa chỉ</th>
+                    <th nzWidth="150px">Tiêu đề</th>
+                    <th nzWidth="150px">Chất lượng</th>
+                    <th nzWidth="150px">Ghi chú</th>
+                    <th nzWidth="120px">Người tạo</th>
+                    <th nzWidth="200px">Ngày tạo</th>
+                    <th nzWidth="120px">Người cập nhật</th>
+                    <th nzWidth="200px">Ngày cập nhật</th>
+                    <th class="frozen-right" nzWidth="210px">Hành động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listData">
+                    <td>
+                      {{ item.stt }}
+                    </td>
+                    <td>{{ item.name }}</td>
+                    <td>
+                      <img
+                        [src]="item.image"
+                        style="width: 100px; height: 100px"
+                      />
+                    </td>
+                    <td>{{ item.provinceName }}</td>
+                    <td>{{ item.address }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>
+                      <span *ngIf="item.star == 1">
+                        <i class="ti-star"></i>
+                      </span>
+                      <span *ngIf="item.star == 2">
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                      </span>
+                      <span *ngIf="item.star == 3">
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                      </span>
+                      <span *ngIf="item.star == 4">
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                      </span>
+                      <span *ngIf="item.star == 5">
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                        <i class="ti-star"></i>
+                      </span>
+                    </td>
+                    <td>{{ item.note }}</td>
+                    <td>{{ item.createdBy }}</td>
+                    <td>
+                      {{ item.createdDate | date: "dd/MM/yyyy HH:mm:ss" }}
+                    </td>
+                    <td>{{ item.modifiedBy }}</td>
+                    <td>
+                      {{ item.modifiedDate | date: "dd/MM/yyyy HH:mm:ss" }}
+                    </td>
+                    <td class="frozen-right">
+                      <button
+                        class="btn btn-primary btn-outline-primary btn-icon m-r-5"
+                        (click)="openModal(item)"
+                        title="Sửa dữ liệu"
+                      >
+                        <i class="ti-pencil-alt m-r-0"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-outline-danger btn-icon m-r-5"
+                        title="Xóa dữ liệu"
+                        nz-popconfirm
+                        nzPopconfirmTitle="Bạn có chắc chắn muốn xóa?"
+                        nzOkText="Ok"
+                        nzCancelText="Hủy"
+                        (nzOnConfirm)="confirm(item.id)"
+                        (nzOnCancel)="cancel()"
+                      >
+                        <i class="ti-trash m-r-0"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-success btn-outline-success btn-icon m-r-5"
+                        title="Danh sách phòng"
+                        [routerLink]="['list-room-by-hotel', item.id]"
+                      >
+                        <i class="ti-list m-r-0"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-warning btn-outline-warning btn-icon"
+                        title="Quản lý thuê phòng"
+                        [routerLink]="['order-room', item.id]"
+                      >
+                        <i class="ti-tablet m-r-0"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </nz-table>
+              <ng-template #totalTemplate let-range="range" let-total>
+                Hiển thị {{ range[0] }}-{{ range[1] }} của {{ total }} bản ghi
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page body end -->
+</div>

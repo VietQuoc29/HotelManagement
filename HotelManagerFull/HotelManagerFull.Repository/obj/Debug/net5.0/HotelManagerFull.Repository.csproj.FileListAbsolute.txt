@@ -1,0 +1,15 @@
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\bin\Debug\net5.0\HotelManagerFull.Repository.deps.json
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\bin\Debug\net5.0\HotelManagerFull.Repository.dll
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\bin\Debug\net5.0\HotelManagerFull.Repository.pdb
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\bin\Debug\net5.0\HotelManagerFull.Share.dll
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\bin\Debug\net5.0\HotelManagerFull.Share.pdb
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.csproj.AssemblyReference.cache
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.AssemblyInfoInputs.cache
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.AssemblyInfo.cs
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.csproj.CoreCompileInputs.cache
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.csproj.CopyComplete
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.dll
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\refint\HotelManagerFull.Repository.dll
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\HotelManagerFull.Repository.pdb
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Repository\obj\Debug\net5.0\ref\HotelManagerFull.Repository.dll

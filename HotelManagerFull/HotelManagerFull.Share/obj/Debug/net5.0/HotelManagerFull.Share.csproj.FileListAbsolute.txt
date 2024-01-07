@@ -1,0 +1,12 @@
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\bin\Debug\net5.0\HotelManagerFull.Share.deps.json
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\bin\Debug\net5.0\HotelManagerFull.Share.dll
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\bin\Debug\net5.0\HotelManagerFull.Share.pdb
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\HotelManagerFull.Share.csproj.AssemblyReference.cache
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\HotelManagerFull.Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\HotelManagerFull.Share.AssemblyInfoInputs.cache
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\HotelManagerFull.Share.AssemblyInfo.cs
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\HotelManagerFull.Share.csproj.CoreCompileInputs.cache
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\HotelManagerFull.Share.dll
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\refint\HotelManagerFull.Share.dll
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\HotelManagerFull.Share.pdb
+D:\Study\4th\Sem1\OOAD\HotelMa\HotelManagerFull\HotelManagerFull\HotelManagerFull.Share\obj\Debug\net5.0\ref\HotelManagerFull.Share.dll

@@ -1,0 +1,107 @@
+1. Tạo app
+npx create-react-app client-app
+
+2. Tạo component
+npm install -g create-components-react
+
+3. Chạy project react
+npm start
+
+4. Tạo router
+npm i react-router-dom
+
+5. Tạo component
+import React from "react"
+
+function Room() {
+    return (
+        <div>
+
+        </div>
+    )
+}
+export default Room;
+
+6. Format tiền tệ lable
+npm i react-number-format
+
+import NumberFormat from "react-number-format";
+
+ <NumberFormat
+    value={2456981}
+    displayType={"text"}
+    thousandSeparator={true}
+    prefix={"$"}
+/>
+
+7. Input format by currency
+npm install react-currency-format --save --force
+
+import CurrencyFormat from "react-currency-format";
+<CurrencyFormat
+    thousandSeparator={true}
+    prefix={""}
+    className="input-price"
+    placeholder="Đến"
+    maxLength={11}
+/>
+
+8. Cài packages
+npm i --save --force
+
+9. Cài packages Loding icon
+npm i react-loading-overlay --save --force
+
+10. Paging
+Go to Extensions tab
+Search for @builtin TypeScript and JavaScript Language Features
+Click on Disable
+
+https://mui.com/material-ui/react-pagination/
+
+npm install @mui/material @emotion/react @emotion/styled
+
+
+import * as React from "react";
+import Typography from "@mui/material/Typography";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+
+export default function PaginationControlled() {
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+    console.log(value);
+  };
+
+  return (
+    <Stack spacing={2}>
+      <Typography>Page: {page}</Typography>
+      <Pagination count={100} page={page} onChange={handleChange} />
+    </Stack>
+  );
+}
+
+11. Slider carousel
+npm i react-responsive-carousel
+
+ <Carousel>
+                <div>
+                    <img src="assets/1.jpeg" />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src="assets/2.jpeg" />
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src="assets/3.jpeg" />
+                    <p className="legend">Legend 3</p>
+                </div>
+            </Carousel>
+
+12. Icon
+npm i react-icons
+https://react-icons.github.io/react-icons/icons?name=fa
+import { FaBusAlt } from "react-icons/fa";
+<FaBusAlt />

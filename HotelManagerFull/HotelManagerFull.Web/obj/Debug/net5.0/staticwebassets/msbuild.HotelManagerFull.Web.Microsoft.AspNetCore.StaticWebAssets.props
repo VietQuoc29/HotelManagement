@@ -1,0 +1,340 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>favicon.ico</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_HOTELS\hà nội.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_HOTELS\hà nội.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_HOTELS\hà nội.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_PROVINCES\download (3).png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_PROVINCES\download (3).png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_PROVINCES\download (3).png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_PROVINCES\hà nội.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_PROVINCES\hà nội.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_PROVINCES\hà nội.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_PROVINCES\thanhhoa.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_PROVINCES\thanhhoa.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_PROVINCES\thanhhoa.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_ROOMS\1.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\1.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\2.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_ROOMS\2.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\2.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\3.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_ROOMS\3.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\3.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\download.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_ROOMS\download.jpeg</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\download.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\Screenshot 2022-05-19 165724.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_ROOMS\Screenshot 2022-05-19 165724.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\Screenshot 2022-05-19 165724.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\toilet.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_ROOMS\toilet.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_ROOMS\toilet.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\7up.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\7up.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\7up.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\A21b.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\A21b.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\A21b.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\Bánh mì.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\Bánh mì.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\Bánh mì.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\dich-vu-giat-la-tai-nha1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\dich-vu-giat-la-tai-nha1.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\dich-vu-giat-la-tai-nha1.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\download.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\download.jpeg</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\download.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\massage-tri-lieu.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\massage-tri-lieu.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\massage-tri-lieu.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\phở bò.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\phở bò.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\phở bò.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\phở.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\phở.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\phở.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\spa.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\spa.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\spa.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\Sting.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>HotelManagerFull.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HotelManagerFull.Web</BasePath>
+      <RelativePath>UPLOAD_SERVICES\Sting.png</RelativePath>
+      <AssetKind></AssetKind>
+      <AssetMode></AssetMode>
+      <AssetRole></AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\UPLOAD_SERVICES\Sting.png))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

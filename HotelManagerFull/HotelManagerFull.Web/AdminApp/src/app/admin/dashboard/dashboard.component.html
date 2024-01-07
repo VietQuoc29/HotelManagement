@@ -1,0 +1,279 @@
+<div class="page-wrapper">
+  <div class="page-body">
+    <div class="row">
+      <div class="col-md-6 col-xl-3">
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Orders Received</h6>
+            <h2 class="text-right">
+              <i class="ti-shopping-cart f-left"></i><span>486</span>
+            </h2>
+            <p class="m-b-0">
+              Completed Orders<span class="f-right">351</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- Basic Form Inputs card start -->
+        <div class="card">
+          <div class="card-header">
+            <h5>Danh sách lịch sử đặt phòng</h5>
+            <span>
+              <ul class="breadcrumb-title b-t-default p-t-10">
+                <li class="breadcrumb-item">
+                  <a> <i class="fa fa-home"></i> </a>
+                </li>
+                <li class="breadcrumb-item">Trang chủ</li>
+              </ul></span
+            >
+          </div>
+          <div class="card-block">
+            <form
+              nz-form
+              [formGroup]="searchForm"
+              (ngSubmit)="search(searchForm.value)"
+            >
+              <div class="form-group row">
+                <div class="col-sm-4 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label"
+                    >Số CMT / Thẻ CCCD</label
+                  >
+                  <div class="col-sm-12">
+                    <input
+                      type="text"
+                      class="form-control form-control-round"
+                      placeholder="Nhập Số CMT / Thẻ CCCD"
+                      formControlName="textSearch"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-8 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label">&nbsp;</label>
+                  <div class="col-sm-12 t-a-r">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-round m-r-5"
+                    >
+                      <i class="ti-search"></i>Tìm kiếm
+                    </button>
+                    <button
+                      class="btn btn-info btn-round"
+                      (click)="resetForm()"
+                    >
+                      <i class="ti-reload"></i>Làm mới
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="table-responsive">
+              <nz-table
+                class="table"
+                nzTableLayout="fixed"
+                nzSize="small"
+                [nzScroll]="{ x: 'scroll' }"
+                nzShowSizeChanger
+                [nzFrontPagination]="false"
+                [nzData]="listData"
+                [nzTotal]="total"
+                [nzPageSize]="pageSize"
+                [nzPageIndex]="pageIndex"
+                [nzLoading]="isLoading"
+                [nzShowTotal]="totalTemplate"
+                (nzQueryParams)="onQueryParamsChange($event)"
+              >
+                <thead>
+                  <tr>
+                    <th nzWidth="80px">STT</th>
+                    <th nzWidth="150px">Tỉnh thành</th>
+                    <th nzWidth="150px">Khách sạn</th>
+                    <th nzWidth="150px">Phòng</th>
+                    <th nzWidth="150px">Khách hàng</th>
+                    <th nzWidth="150px">Số điện thoại</th>
+                    <th nzWidth="150px">CMT/CCCD</th>
+                    <th nzWidth="210px">Thời gian bắt đầu thuê phòng</th>
+                    <th nzWidth="180px">Thời gian trả phòng</th>
+                    <th nzWidth="150px">Số tiền thanh toán</th>
+                    <th nzWidth="150px">Trạng thái</th>
+                    <th nzWidth="120px">Người tạo</th>
+                    <th nzWidth="200px">Ngày tạo</th>
+                    <th nzWidth="120px">Người cập nhật</th>
+                    <th nzWidth="200px">Ngày cập nhật</th>
+                    <th class="frozen-right" nzWidth="150px">Hành động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listData">
+                    <td>
+                      {{ item.stt }}
+                    </td>
+                    <td>{{ item.provincesName }}</td>
+                    <td>{{ item.hotelName }}</td>
+                    <td>{{ item.roomName }}</td>
+                    <td>{{ item.fullName }}</td>
+                    <td>{{ item.phoneNumber }}</td>
+                    <td>{{ item.idCard }}</td>
+                    <td>{{ item.startTime | date: "dd/MM/yyyy HH:mm:ss" }}</td>
+                    <td>{{ item.endTime | date: "dd/MM/yyyy HH:mm:ss" }}</td>
+                    <td *ngIf="item.totalPayment != null">
+                      {{ item.totalPayment | currency: "VND":"" }} vnđ
+                    </td>
+                    <td *ngIf="item.totalPayment == null"></td>
+                    <td>{{ item.statusName }}</td>
+                    <td>{{ item.createdBy }}</td>
+                    <td>
+                      {{ item.createdDate | date: "dd/MM/yyyy HH:mm:ss" }}
+                    </td>
+                    <td>{{ item.modifiedBy }}</td>
+                    <td>
+                      {{ item.modifiedDate | date: "dd/MM/yyyy HH:mm:ss" }}
+                    </td>
+                    <td class="frozen-right">
+                      <button
+                        class="btn btn-primary btn-outline-primary btn-icon m-r-5"
+                        (click)="openModal(item)"
+                        title="Xem dữ liệu"
+                      >
+                        <i class="ti-eye m-r-0"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </nz-table>
+              <ng-template #totalTemplate let-range="range" let-total>
+                Hiển thị {{ range[0] }}-{{ range[1] }} của {{ total }} bản ghi
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- Basic Form Inputs card start -->
+        <div class="card">
+          <div class="card-header">
+            <h5>Danh sách đặt phòng qua web-site</h5>
+            <span>
+              <ul class="breadcrumb-title b-t-default p-t-10">
+                <li class="breadcrumb-item">
+                  <a> <i class="fa fa-home"></i> </a>
+                </li>
+                <li class="breadcrumb-item">Trang chủ</li>
+              </ul></span
+            >
+          </div>
+          <div class="card-block">
+            <form
+              nz-form
+              [formGroup]="searchFormRegisterRooms"
+              (ngSubmit)="searchRegisterRooms(searchFormRegisterRooms.value)"
+            >
+              <div class="form-group row">
+                <div class="col-sm-4 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label"
+                    >Số điện thoại</label
+                  >
+                  <div class="col-sm-12">
+                    <input
+                      type="text"
+                      class="form-control form-control-round"
+                      placeholder="Nhập Số điện thoại"
+                      formControlName="textSearchRegisterRooms"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-8 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label">&nbsp;</label>
+                  <div class="col-sm-12 t-a-r">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-round m-r-5"
+                    >
+                      <i class="ti-search"></i>Tìm kiếm
+                    </button>
+                    <button
+                      class="btn btn-info btn-round"
+                      (click)="resetFormRegisterRooms()"
+                    >
+                      <i class="ti-reload"></i>Làm mới
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="table-responsive">
+              <nz-table
+                class="table"
+                nzTableLayout="fixed"
+                nzSize="small"
+                [nzScroll]="{ x: 'scroll' }"
+                nzShowSizeChanger
+                [nzFrontPagination]="false"
+                [nzData]="listDataRegisterRooms"
+                [nzTotal]="totalRegisterRooms"
+                [nzPageSize]="pageSizeRegisterRooms"
+                [nzPageIndex]="pageIndexRegisterRooms"
+                [nzLoading]="isLoadingRegisterRooms"
+                [nzShowTotal]="totalTemplateRegisterRooms"
+                (nzQueryParams)="onQueryParamsChangeRegisterRooms($event)"
+              >
+                <thead>
+                  <tr>
+                    <th nzWidth="80px">STT</th>
+                    <th nzWidth="200px">Ngày tạo</th>
+                    <th nzWidth="150px">Họ và tên</th>
+                    <th nzWidth="150px">Email</th>
+                    <th nzWidth="150px">Số điện thoại</th>
+                    <th nzWidth="150px">Phòng</th>
+                    <th nzWidth="150px">Giá phòng</th>
+                    <th nzWidth="300px">Thời gian</th>
+                    <th nzWidth="150px">Trạng thái</th>
+                    <th nzWidth="120px">Người cập nhật</th>
+                    <th nzWidth="200px">Ngày cập nhật</th>
+                    <th class="frozen-right" nzWidth="150px">Hành động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listDataRegisterRooms">
+                    <td>
+                      {{ item.stt }}
+                    </td>
+                    <td>{{ item.createdDate | date: "dd/MM/yyyy HH:mm:ss" }}</td>
+                    <td>{{ item.fullName }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phoneNumber }}</td>
+                    <td>{{ item.roomName }}</td>
+                    <td>{{ item.promotionalPrice | currency: "VND":"" }} vnđ</td>
+                    <td>{{ item.timeFrom | date: "dd/MM/yyyy HH:mm:ss"}} - {{ item.timeTo | date: "dd/MM/yyyy HH:mm:ss"}}</td>
+                    <td>{{ item.statusName }}</td>
+                    <td>{{ item.modifiedBy }}</td>
+                    <td>
+                      {{ item.modifiedDate | date: "dd/MM/yyyy HH:mm:ss" }}
+                    </td>
+                    <td class="frozen-right">
+                      <button
+                        class="btn btn-primary btn-outline-primary btn-icon m-r-5"
+                        (click)="openModalRegisterRooms(item)"
+                        title="Xem dữ liệu"
+                      >
+                        <i class="ti-eye m-r-0"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </nz-table>
+              <ng-template #totalTemplateRegisterRooms let-range="range" let-total>
+                Hiển thị {{ range[0] }}-{{ range[1] }} của {{ totalRegisterRooms }} bản ghi
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

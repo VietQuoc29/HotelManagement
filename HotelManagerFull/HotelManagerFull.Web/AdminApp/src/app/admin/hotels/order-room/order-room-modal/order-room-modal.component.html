@@ -1,0 +1,73 @@
+<form nz-form [formGroup]="modalForm" (ngSubmit)="submitForm()">
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Khách hàng</label>
+    <div class="col-sm-9">
+      <nz-select formControlName="customerId" class="form-control form-control-round" nzShowSearch nzServerSearch
+        nzPlaceHolder="Nhập tối thiểu 3 ký tự CMT/CCCD" [nzShowArrow]="false" [nzFilterOption]="nzFilterOption"
+        (ngModelChange)="changeCustomer($event)" (nzOnSearch)="searchCustomer($event)">
+        <ng-container *ngFor="let item of listCustomer">
+          <nz-option *ngIf="!isLoading" [nzLabel]="item.idCard" [nzValue]="item.id"></nz-option>
+        </ng-container>
+        <nz-option *ngIf="isLoading" nzDisabled nzCustomContent>
+          <i nz-icon nzType="loading" class="loading-icon"></i> Loading Data...
+        </nz-option>
+      </nz-select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Tên đầy đủ</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-round" placeholder="Tên đầy đủ" formControlName="fullName"
+        maxlength="50" readonly />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Số điện thoại</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-round" placeholder="Số điện thoại"
+        formControlName="phoneNumber" maxlength="11" readonly />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Địa chỉ</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-round" placeholder="Địa chỉ" formControlName="address"
+        maxlength="500" readonly />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Ngày sinh</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-round" placeholder="Ngày sinh" formControlName="dateOfBirth"
+        maxlength="50" readonly />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Giới tính</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-round" placeholder="Giới tính" formControlName="sexName"
+        maxlength="50" readonly />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Ghi chú</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control form-control-round" placeholder="Ghi chú" formControlName="note"
+        maxlength="500" readonly />
+    </div>
+  </div>
+  <div class="t-a-r">
+    <button type="button" class="btn btn-danger btn-round m-r-5" (click)="cancelModal(false)">
+      <i class="ti-na"></i>Thoát
+    </button>
+    <button type="button" class="btn btn-success btn-round m-r-5" (click)="goToCustomer()">
+      <i class="ti-user"></i>Thêm Khách Hàng
+    </button>
+    <button class="btn btn-primary btn-round">
+      <i class="ti-save"></i>Lưu
+    </button>
+  </div>
+</form>
+<div class="custom-snip" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

@@ -1,0 +1,19 @@
+.login-page {
+    background-color: #00bcd4;
+    padding-left: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.login-box {
+    max-width: 360px;
+    margin: 5% auto;
+}
+
+.form-control:focus {
+    border-bottom: 1px solid #1f91f3 !important;
+}
+
+.btn {
+    padding: 6px 8px;
+}

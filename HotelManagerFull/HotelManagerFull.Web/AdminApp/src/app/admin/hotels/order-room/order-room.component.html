@@ -1,0 +1,228 @@
+<div class="page-wrapper">
+  <!-- Page body start -->
+  <div class="page-body">
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- Basic Form Inputs card start -->
+        <div class="card">
+          <div class="card-header">
+            <h5>Danh sách thuê phòng</h5>
+            <span>
+              <ul class="breadcrumb-title b-t-default p-t-10">
+                <li class="breadcrumb-item">
+                  <a (click)="goToDashborad()"> <i class="fa fa-home"></i> </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a [routerLink]="['/admin/hotels']"> Khách sạn </a>
+                </li>
+                <li class="breadcrumb-item">Quản lý thuê phòng</li>
+              </ul></span
+            >
+          </div>
+          <div class="card-block">
+            <form
+              nz-form
+              [formGroup]="searchForm"
+              (ngSubmit)="search(searchForm.value)"
+            >
+              <div class="form-group row">
+                <div class="col-sm-4 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label"
+                    >Hoạt động phòng</label
+                  >
+                  <div class="col-sm-12">
+                    <nz-select
+                      nzPlaceHolder="Tất cả phòng"
+                      class="form-control form-control-round"
+                      formControlName="textSearch"
+                      nzAllowClear="true"
+                    >
+                      <ng-container *ngFor="let item of listRoomStatus">
+                        <nz-option
+                          [nzLabel]="item.name"
+                          [nzValue]="item.id"
+                        ></nz-option>
+                      </ng-container>
+                    </nz-select>
+                  </div>
+                </div>
+                <div class="col-sm-8 p-l-0 p-r-0">
+                  <label class="col-sm-12 col-form-label">&nbsp;</label>
+                  <div class="col-sm-12 t-a-r">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-round m-r-5"
+                    >
+                      <i class="ti-search"></i>Tìm kiếm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="table-responsive">
+              <nz-table
+                class="table table-room-manager"
+                nzTableLayout="fixed"
+                nzSize="small"
+                [nzScroll]="{ x: 'scroll' }"
+                nzShowSizeChanger
+                [nzFrontPagination]="false"
+                [nzData]="listData"
+                [nzTotal]="total"
+                [nzPageSize]="pageSize"
+                [nzPageIndex]="pageIndex"
+                [nzLoading]="isLoading"
+                [nzShowTotal]="totalTemplate"
+                (nzQueryParams)="onQueryParamsChange($event)"
+                [nzPageSizeOptions]="[9, 18, 27, 36, 45]"
+              >
+                <thead>
+                  <tr>
+                    <div
+                      class="order-room{{ item.roomStatusId }}"
+                      *ngFor="let item of listData"
+                    >
+                      <div class="thumbnail">
+                        <div>
+                          <img [src]="item.image" class="image-order-room" />
+                        </div>
+                        <div class="conten-order-room">
+                          <span class="room-name1">
+                            <i class="ti-home"></i> &nbsp;{{ item.name }}</span
+                          ><br />
+                          <span class="room-name2">
+                            <i class="ti-location-arrow"></i> &nbsp;{{
+                              item.floorName
+                            }}
+                            - {{ item.roomCategoriesName }}</span
+                          ><br />
+                          <span class="room-name2"
+                            ><i class="ti-money"></i> &nbsp;{{
+                              item.price | currency: "VND":""
+                            }}
+                            vnđ </span
+                          ><br />
+                          <span class="room-name2"
+                            ><i class="ti-money"></i> &nbsp;{{
+                              item.promotionalPrice | currency: "VND":""
+                            }}
+                            vnđ (Áp dụng đặt phòng qua email)</span
+                          ><br />
+                          <span class="room-name3">
+                            <i class="ti-user"></i> &nbsp;
+                            <span *ngIf="item.roomStatusId == 2">
+                              {{ item.fullName }} -
+                              <span title="Số điện thoại">
+                                {{ item.phoneNumber }}</span
+                              >
+                              -
+                              <span title="CMT/CCCD"> {{ item.idCard }}</span>
+                            </span>
+                            <button
+                              *ngIf="item.roomStatusId == 1"
+                              type="button"
+                              class="btn btn-danger btn-round"
+                              (click)="openModal(item)"
+                            >
+                              Đặt phòng
+                            </button>
+                            <span
+                              *ngIf="
+                                item.roomStatusId == 3 ||
+                                item.roomStatusId == 4 ||
+                                item.roomStatusId == 5
+                              "
+                              >Phòng chưa sẵn sàng sử dụng</span
+                            > </span
+                          ><br />
+                          <span class="room-name4">
+                            <i class="ti-timer"></i> &nbsp;
+                            <span
+                              *ngIf="
+                                item.roomStatusId == 1 ||
+                                item.roomStatusId == 3 ||
+                                item.roomStatusId == 4 ||
+                                item.roomStatusId == 5
+                              "
+                              >{{ item.roomStatusName }}</span
+                            >
+                            <span *ngIf="item.roomStatusId == 2">{{
+                              item.startTime | date: "dd/MM/yyyy HH:mm:ss"
+                            }}</span>
+                          </span>
+                          <br />
+                          <span class="room-name5">
+                            <button
+                              *ngIf="
+                                item.roomStatusId == 1 ||
+                                item.roomStatusId == 3 ||
+                                item.roomStatusId == 4 ||
+                                item.roomStatusId == 5
+                              "
+                              type="button"
+                              class="btn btn-info btn-round m-r-5"
+                              (click)="operationRoom(item.id, 3)"
+                            >
+                              Dọn dẹp
+                            </button>
+                            <button
+                              *ngIf="
+                                item.roomStatusId == 1 ||
+                                item.roomStatusId == 3 ||
+                                item.roomStatusId == 4 ||
+                                item.roomStatusId == 5
+                              "
+                              type="button"
+                              class="btn btn-info btn-round m-r-5"
+                              (click)="operationRoom(item.id, 4)"
+                            >
+                              Sửa chữa
+                            </button>
+                            <button
+                              *ngIf="
+                                item.roomStatusId == 1 ||
+                                item.roomStatusId == 3 ||
+                                item.roomStatusId == 4 ||
+                                item.roomStatusId == 5
+                              "
+                              type="button"
+                              class="btn btn-success btn-round"
+                              (click)="operationRoom(item.id, 1)"
+                            >
+                              Sẵn sàng
+                            </button>
+
+                            <button
+                              *ngIf="item.roomStatusId == 2"
+                              type="button"
+                              class="btn btn-warning btn-round m-r-5"
+                              (click)="callService(item)"
+                            >
+                              Gọi dịch vụ
+                            </button>
+                            <button
+                              *ngIf="item.roomStatusId == 2"
+                              type="button"
+                              class="btn btn-success btn-round"
+                              (click)="returnRoom(item)"
+                            >
+                              Trả phòng
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </tr>
+                </thead>
+              </nz-table>
+              <ng-template #totalTemplate let-range="range" let-total>
+                Hiển thị {{ range[0] }}-{{ range[1] }} của {{ total }} bản ghi
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page body end -->
+</div>

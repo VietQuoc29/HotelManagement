@@ -1,0 +1,168 @@
+<form nz-form [formGroup]="modalForm" (ngSubmit)="submitForm()">
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Họ và tên</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Họ và tên"
+        formControlName="fullName"
+        maxlength="50"
+        readonly
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Email</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Email"
+        formControlName="email"
+        maxlength="50"
+        readonly
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Số điện thoại</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Số điện thoại"
+        formControlName="phoneNumber"
+        maxlength="11"
+        readonly
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Phòng</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Phòng"
+        formControlName="roomName"
+        readonly
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Giá phòng</label>
+    <div class="col-sm-9">
+      <input
+        nz-input
+        class="form-control form-control-round"
+        formControlName="promotionalPrice"
+        placeholder="Giá phòng"
+        mask="separator.2"
+        thousandSeparator=","
+        maxlength="17"
+        readonly
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Thời gian</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Thời gian"
+        formControlName="time"
+        maxlength="50"
+        readonly
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Trạng thái</label>
+    <div class="col-sm-9">
+      <nz-radio-group class="p-t-10" formControlName="status">
+        <label nz-radio nzValue="1">Đã xử lý</label>
+        <label nz-radio nzValue="0">Chưa xử lý</label>
+      </nz-radio-group>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Ghi chú khách hàng</label>
+    <div class="col-sm-9">
+      <textarea
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Ghi chú khách hàng"
+        formControlName="note"
+        maxlength="500"
+        rows="3"
+        readonly
+      ></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Ghi chú của nhân viên</label>
+    <div class="col-sm-9">
+      <textarea
+        type="text"
+        class="form-control form-control-round"
+        placeholder="Ghi chú nhân viên"
+        formControlName="message"
+        maxlength="500"
+        rows="3"
+      ></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Ngày tạo</label>
+    <div class="col-sm-9">
+      <nz-date-picker
+        [nzFormat]="dateFormat"
+        formControlName="createdDate"
+        class="form-control form-control-round"
+        nzPlaceHolder=" "
+        nzDisabled
+      ></nz-date-picker>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Người cập nhật</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control form-control-round"
+        formControlName="modifiedBy"
+        maxlength="50"
+        readonly
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-3 col-form-label">Ngày cập nhật</label>
+    <div class="col-sm-9">
+      <nz-date-picker
+        [nzFormat]="dateFormat"
+        formControlName="modifiedDate"
+        class="form-control form-control-round"
+        nzPlaceHolder=" "
+        nzDisabled
+      ></nz-date-picker>
+    </div>
+  </div>
+  <div class="t-a-r">
+    <button
+      type="button"
+      class="btn btn-danger btn-round m-r-5"
+      (click)="cancelModal(false)"
+    >
+      <i class="ti-na"></i>Thoát
+    </button>
+    <button class="btn btn-primary btn-round">
+      <i class="ti-save"></i>Lưu
+    </button>
+  </div>
+</form>
+<div class="custom-snip" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

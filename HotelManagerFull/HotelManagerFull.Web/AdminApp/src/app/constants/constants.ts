@@ -1,0 +1,21 @@
+// export const URL_API = 'http://hotelapi.somee.com/api/';
+// export const URL_API = 'https://localhost:44348/api/';
+export const URL_API = 'https://localhost:5001/api/';
+
+export const StringEmpty = '';
+export const PPT = 'ppt';
+export const PPTX = 'pptx';
+export const PDF = 'pdf';
+export const MP4 = 'mp4';
+export const ZIP = 'ZIP';
+export const Z7 = '7z';
+export const CSV = 'csv';
+export const XLS = 'XLS';
+export const XLSX = 'XLSX';
+export const DATE_FORMAT = 'dd/MM/yyyy';
+export const DATE_TIME_FORMAT = 'dd/MM/yyyy HH:mm:ss';
+export const BASE_IMAGE = 'assets/images/base.jpg';
+export const MOMENT_DATE_FORMAT = 'YYYY-MM-DD';
+export const PNG = 'png';
+export const JPG = 'jpg';
+export const JPEG = 'jpeg';

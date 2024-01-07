@@ -1,0 +1,373 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Web\\HotelManagerFull.Web.csproj": {}
+  },
+  "projects": {
+    "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Business\\HotelManagerFull.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Business\\HotelManagerFull.Business.csproj",
+        "projectName": "HotelManagerFull.Business",
+        "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Business\\HotelManagerFull.Business.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Repository\\HotelManagerFull.Repository.csproj": {
+                "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Repository\\HotelManagerFull.Repository.csproj"
+              },
+              "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj": {
+                "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Repository\\HotelManagerFull.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Repository\\HotelManagerFull.Repository.csproj",
+        "projectName": "HotelManagerFull.Repository",
+        "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Repository\\HotelManagerFull.Repository.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj": {
+                "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "EFCore.BulkExtensions": {
+              "target": "Package",
+              "version": "[5.4.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj",
+        "projectName": "HotelManagerFull.Share",
+        "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.17.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.17.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Web\\HotelManagerFull.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Web\\HotelManagerFull.Web.csproj",
+        "projectName": "HotelManagerFull.Web",
+        "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Web\\HotelManagerFull.Web.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Business\\HotelManagerFull.Business.csproj": {
+                "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Business\\HotelManagerFull.Business.csproj"
+              },
+              "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj": {
+                "projectPath": "D:\\Study\\4th\\Sem1\\OOAD\\HotelMa\\HotelManagerFull\\HotelManagerFull\\HotelManagerFull.Share\\HotelManagerFull.Share.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            },
+            "Microsoft.ApplicationInsights": {
+              "target": "Package",
+              "version": "[2.20.0, )"
+            },
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.20.0, )"
+            },
+            "Microsoft.ApplicationInsights.DependencyCollector": {
+              "target": "Package",
+              "version": "[2.20.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Microsoft.TypeScript.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.6.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

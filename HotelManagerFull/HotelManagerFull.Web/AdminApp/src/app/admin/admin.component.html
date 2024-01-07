@@ -1,0 +1,106 @@
+<div
+  id="pcoded"
+  class="pcoded iscollapsed"
+  theme-layout="vertical"
+  vertical-placement="left"
+  vertical-layout="wide"
+  pcoded-device-type="desktop"
+  vertical-nav-type="expanded"
+  vertical-effect="shrink"
+  vnavigation-view="view1"
+  nav-type="st2"
+  fream-type="theme1"
+  layout-type="light"
+>
+  <div class="pcoded-overlay-box"></div>
+  <div class="pcoded-container navbar-wrapper">
+    <nav
+      class="navbar header-navbar pcoded-header"
+      header-theme="theme5"
+      pcoded-header-position="fixed"
+    >
+      <div class="navbar-wrapper">
+        <div class="navbar-logo" logo-theme="theme1">
+          <a [routerLink]="['dashboard']">
+            <img
+              class="img-fluid"
+              src="assets/images/logo.png"
+              alt="Theme-Logo"
+            />
+          </a>
+        </div>
+
+        <div class="navbar-container container-fluid">
+          <ul class="nav-left">
+            <li>
+              <div class="menu-bar" [routerLink]="['dashboard']">
+                <a [routerLink]="['dashboard']">
+                  <span><i class="ti-home"></i> Trang Chủ</span>
+                </a>
+              </div>
+              <div class="menu-bar" [routerLink]="['provinces']">
+                <a [routerLink]="['provinces']">
+                  <span><i class="ti-map-alt"></i> Tỉnh Thành</span>
+                </a>
+              </div>
+              <div class="menu-bar" [routerLink]="['hotels']">
+                <a [routerLink]="['hotels']">
+                  <span><i class="ti-layout-media-center"></i> Khách Sạn</span>
+                </a>
+              </div>
+              <div class="menu-bar" [routerLink]="['customers']">
+                <a [routerLink]="['customers']">
+                  <span><i class="ti-user"></i> Khách Hàng</span>
+                </a>
+              </div>
+              <div class="menu-bar" [routerLink]="['services']">
+                <a [routerLink]="['services']">
+                  <span><i class="ti-stack-overflow"></i> Dịch Vụ</span>
+                </a>
+              </div>
+              <div class="menu-bar" [routerLink]="['room-categories']">
+                <a [routerLink]="['room-categories']">
+                  <span><i class="ti-receipt"></i> Loại Phòng</span>
+                </a>
+              </div>
+              <div class="menu-bar" [routerLink]="['floors']">
+                <a [routerLink]="['floors']">
+                  <span><i class="ti-location-arrow"></i> Vị Trí</span>
+                </a>
+              </div>
+              <div class="menu-bar" [routerLink]="['user-profile']">
+                <a [routerLink]="['user-profile']">
+                  <span><i class="ti-face-smile"></i> Người Dùng</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav-right">
+            <li class="user-profile header-notification">
+              <a class="info-custom">
+                <img
+                  src="assets/images/avatar-4.jpg"
+                  class="img-radius"
+                  alt="User-Profile-Image"
+                />
+                <span>{{ username }} |</span>
+                <a class="logout-custom" (click)="logOut()">Đăng xuất</a>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="pcoded-main-container">
+      <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+          <div class="pcoded-inner-content">
+            <div class="main-body">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

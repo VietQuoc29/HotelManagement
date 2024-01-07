@@ -1,0 +1,31 @@
+<form nz-form [formGroup]="modalForm" (ngSubmit)="submitForm()">
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <div class="list-image-room" *ngFor="let item of listImage">
+                <img [src]="item.imageLink" class="img-custom-room" />
+                <br>
+                <button type="button" class="btn btn-primary btn-remove-image" title="Xóa ảnh" nz-popconfirm
+                    nzPopconfirmTitle="Bạn có chắc chắn muốn xóa ảnh này không?" nzOkText="Ok" nzCancelText="Hủy"
+                    (nzOnConfirm)="confirm(item.id)" (nzOnCancel)="cancel()">
+                    <div class="m-t--5"><i class="ti-trash icon-remove-image m-r-0"></i></div>
+                </button>
+            </div>
+            <input id="files" name="files" type="file" class="form-control form-control-round" #myFiles multiple
+                (change)="onFileChange($event)" accept=".png, .jpg, .jpeg" />
+            <i>Tối đa <b>10</b> ảnh, Dung lượng tối đa <b>2 Mb</b> 1 ảnh</i>
+            <br>
+            <i>Ảnh vượt quá 2Mb sẽ không được tải lên</i>
+        </div>
+    </div>
+    <div class="t-a-r">
+        <button type="button" class="btn btn-danger btn-round m-r-5" (click)="cancelModal(true)">
+            <i class="ti-na"></i>Thoát
+        </button>
+        <button class="btn btn-primary btn-round">
+            <i class="ti-save"></i>Tải ảnh lên & Lưu
+        </button>
+    </div>
+</form>
+<div class="custom-snip" *ngIf="isLoading">
+    <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

@@ -1,0 +1,121 @@
+<form nz-form [formGroup]="modalForm" (ngSubmit)="submitForm()">
+  <div class="form-group row">
+    <div class="col-sm-8 p-r-0">
+      <div class="card-block accordion-block">
+        <div
+          id="accordion_{{ item.id }}"
+          role="tablist"
+          aria-multiselectable="true"
+          class="ng-star-inserted-custom"
+          *ngFor="let item of listSerrviceByServiceCategories"
+        >
+          <div class="accordion-panel">
+            <div
+              class="accordion-heading"
+              role="tab"
+              id="headingOne_{{ item.id }}"
+            >
+              <h3 class="card-title accordion-title">
+                <a
+                  class="accordion-msg"
+                  data-toggle="collapse"
+                  attr.data-parent="#accordion_{{ item.id }}"
+                  href="#collapseOne_{{ item.id }}"
+                  aria-expanded="true"
+                  attr.aria-controls="collapseOne_{{ item.id }}"
+                >
+                  {{ item.name }}
+                </a>
+              </h3>
+            </div>
+            <div
+              id="collapseOne_{{ item.id }}"
+              class="panel-collapse collapse"
+              role="tabpanel"
+              attr.aria-labelledby="headingOne_{{ item.id }}"
+            >
+              <div class="accordion-content accordion-desc">
+                <div class="order-service" *ngFor="let o of item.listService">
+                  <img [src]="o.image" class="img-order-service" />
+                  <br />
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-add-service-image"
+                    title="Chọn dịch vụ"
+                    (click)="addFieldValue(o.id, o.name)"
+                  >
+                    <div class="m-t--5">
+                      <i class="ti-plus icon-remove-image m-r-0"></i>
+                    </div>
+                  </button>
+                  <p class="order-service-name">{{ o.name }}</p>
+                  <p class="order-service-price">
+                    {{ o.price | currency: "VND":"" }} vnđ/{{ o.unit }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card-block accordion-block">
+        <table class="table-order-service">
+          <tr>
+            <th class="table-order-service-th">Tên dịch vụ</th>
+            <th class="table-order-service-th">Số lượng</th>
+            <th class="table-order-service-th">Thao tác</th>
+          </tr>
+          <tr *ngFor="let item of listTransactions; let i = index">
+            <td class="table-order-service-td">{{ item.name }}</td>
+            <td class="table-order-service-td">
+              <input
+                type="number"
+                class="form-control form-control-round"
+                placeholder="Số lượng"
+                [(ngModel)]="item.quantity"
+                name="{{ i }}"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </td>
+            <td class="table-order-service-td">
+              <button
+                type="button"
+                class="btn btn-danger btn-outline-danger btn-icon m-r-5"
+                title="Xóa dịch vụ"
+                (click)="deleteFieldValue(i)"
+              >
+                <i class="ti-trash m-r-0"></i>
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="listTransactions.length == 0">
+            <td
+              class="table-order-service-td"
+              colspan="3"
+              style="text-align: center"
+            >
+              Chưa có dịch vụ
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="t-a-r">
+    <button
+      type="button"
+      class="btn btn-danger btn-round m-r-5"
+      (click)="cancelModal(false)"
+    >
+      <i class="ti-na"></i>Thoát
+    </button>
+    <button class="btn btn-primary btn-round">
+      <i class="ti-save"></i>Lưu
+    </button>
+  </div>
+</form>
+<div class="custom-snip" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

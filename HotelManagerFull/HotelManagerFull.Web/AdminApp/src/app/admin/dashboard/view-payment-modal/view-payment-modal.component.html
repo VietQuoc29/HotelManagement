@@ -1,0 +1,109 @@
+<form nz-form>
+  <div class="typography">
+    <div class="form-group row">
+      <div class="col-sm-12 col-xl-6">
+        <h4 class="sub-title">Thông tin</h4>
+        <table class="table-order-service">
+          <tr>
+            <td class="table-order-service-td">Tỉnh thành</td>
+            <td class="table-order-service-td">{{ provinceName }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Khách sạn</td>
+            <td class="table-order-service-td">{{ hotelName }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Phòng</td>
+            <td class="table-order-service-td">{{ name }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Vị trí</td>
+            <td class="table-order-service-td">{{ floorName }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Khách hàng</td>
+            <td class="table-order-service-td">{{ fullName }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Số điện thoại</td>
+            <td class="table-order-service-td">{{ phoneNumber }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">CMT/CCCD</td>
+            <td class="table-order-service-td">{{ idCard }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Thời gian bắt đầu thuê phòng</td>
+            <td class="table-order-service-td">
+              {{ startTime | date: "dd/MM/yyyy HH:mm:ss" }}
+            </td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Thời gian trả phòng</td>
+            <td class="table-order-service-td">
+              {{ endTime | date: "dd/MM/yyyy HH:mm:ss" }}
+            </td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Tổng thời gian thuê phòng</td>
+            <td class="table-order-service-td">
+              {{ totalHour }}:{{ totalMinutes }} phút
+            </td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Nhân viên đặt phòng</td>
+            <td class="table-order-service-td">{{ createdBy }}</td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td">Trạng thái</td>
+            <td class="table-order-service-td">{{ status }}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-sm-12 col-xl-6">
+        <h4 class="sub-title">Dịch vụ sử dụng</h4>
+        <table class="table-order-service">
+          <tr>
+            <th class="table-order-service-th">Thông tin</th>
+            <th class="table-order-service-th">Đơn giá</th>
+            <th class="table-order-service-th">Số lượng</th>
+            <th class="table-order-service-th">Thành tiền</th>
+          </tr>
+          <tr *ngFor="let item of listTransactions">
+            <td class="table-order-service-td">{{ item.serviceName }}</td>
+            <td class="table-order-service-td">
+              {{ item.price | currency: "VND":"" }} vnđ/{{ item.unit }}
+            </td>
+            <td class="table-order-service-td">
+              {{ item.quantity }}
+            </td>
+            <td class="table-order-service-td">
+              {{ item.intoMoney | currency: "VND":"" }} vnđ
+            </td>
+          </tr>
+          <tr>
+            <td class="table-order-service-td" colspan="2"></td>
+            <td class="table-order-service-td">
+              <b><i>Tổng tiền:</i></b>
+            </td>
+            <td class="table-order-service-td">
+              {{ totalPaymentTemp | currency: "VND":"" }} vnđ
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="t-a-r">
+    <button
+      type="button"
+      class="btn btn-danger btn-round m-r-5"
+      (click)="cancelModal(false)"
+    >
+      <i class="ti-na"></i>Thoát
+    </button>
+  </div>
+</form>
+<div class="custom-snip" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

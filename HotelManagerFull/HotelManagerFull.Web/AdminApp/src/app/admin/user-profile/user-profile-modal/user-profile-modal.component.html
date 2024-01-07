@@ -1,0 +1,127 @@
+<form nz-form [formGroup]="modalForm" (ngSubmit)="submitForm()">
+    <div *ngIf="!isShowInfo" class="form-group row">
+        <label class="col-sm-3 col-form-label">Tên đăng nhập<span class="required-custom">(*)</span></label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Tên đăng nhập"
+                formControlName="userName" maxlength="50" />
+        </div>
+    </div>
+    <div *ngIf="isShowInfo" class="form-group row">
+        <label class="col-sm-3 col-form-label">Tên đăng nhập<span class="required-custom">(*)</span></label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Tên đăng nhập"
+                formControlName="userName" maxlength="50" readonly />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Tên đầy đủ<span class="required-custom">(*)</span></label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Tên đầy đủ"
+                formControlName="fullName" maxlength="50" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Ngày sinh</label>
+        <div class="col-sm-9">
+            <nz-date-picker [nzFormat]="dateFormatDateOfBirth" formControlName="dateOfBirth" [nzAllowClear]="false"
+                [nzDisabledDate]="disabledDate" nzPlaceHolder="Chọn ngày sinh" class="form-control form-control-round">
+            </nz-date-picker>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Số điện thoại</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Số điện thoại"
+                formControlName="phoneNumber" maxlength="11" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Địa chỉ</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Địa chỉ" formControlName="address"
+                maxlength="150" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Email" formControlName="email"
+                maxlength="150" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Facebook</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Facebook" formControlName="facebook"
+                maxlength="50" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Zalo</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control form-control-round" placeholder="Zalo" formControlName="zalo"
+                maxlength="50" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Giới tính</label>
+        <div class="col-sm-9">
+            <nz-select nzPlaceHolder="Chọn giới tính" class="form-control form-control-round" formControlName="sexId">
+                <ng-container *ngFor="let item of listSex">
+                    <nz-option [nzLabel]="item.name" [nzValue]="item.id"></nz-option>
+                </ng-container>
+            </nz-select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Vai trò<span class="required-custom">(*)</span></label>
+        <div class="col-sm-9">
+            <nz-select nzPlaceHolder="Chọn vai trò" class="form-control form-control-round" formControlName="roleId">
+                <ng-container *ngFor="let item of listRole">
+                    <nz-option [nzLabel]="item.name" [nzValue]="item.id"></nz-option>
+                </ng-container>
+            </nz-select>
+        </div>
+    </div>
+    <div *ngIf="isShowInfo">
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Người tạo</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-round" formControlName="createdBy" maxlength="50"
+                    readonly />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Ngày tạo</label>
+            <div class="col-sm-9">
+                <nz-date-picker [nzFormat]="dateFormat" formControlName="createdDate"
+                    class="form-control form-control-round" nzPlaceHolder=" " nzDisabled></nz-date-picker>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Người cập nhật</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-round" formControlName="modifiedBy" maxlength="50"
+                    readonly />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Ngày cập nhật</label>
+            <div class="col-sm-9">
+                <nz-date-picker [nzFormat]="dateFormat" formControlName="modifiedDate"
+                    class="form-control form-control-round" nzPlaceHolder=" " nzDisabled></nz-date-picker>
+            </div>
+        </div>
+    </div>
+    <div class="t-a-r">
+        <button type="button" class="btn btn-danger btn-round m-r-5" (click)="cancelModal(false)">
+            <i class="ti-na"></i>Thoát
+        </button>
+        <button class="btn btn-primary btn-round">
+            <i class="ti-save"></i>Lưu
+        </button>
+    </div>
+</form>
+<div class="custom-snip" *ngIf="isLoading">
+    <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>
